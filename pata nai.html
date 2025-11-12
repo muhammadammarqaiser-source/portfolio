@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+<style type="text/css">
+	img{
+		width:100%;
+	}
+.navbar {
+  width: 100%;
+  height: 70px;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 60px;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 15px rgba(255, 140, 0, 0.3);
+}
+
+/* Logo */
+.logo {
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.logo span {
+  color: #ff7b00;
+}
+
+/* Nav Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+.nav-links li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+.nav-links li a::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: #ff7b00;
+  transition: width 0.3s ease;
+}
+.nav-links li a:hover {
+  color: #ff7b00;
+}
+.nav-links li a:hover::after,
+.nav-links li a.active::after {
+  width: 100%;
+}
+
+/* Hamburger Menu (Mobile) */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+.bar {
+  height: 3px;
+  width: 25px;
+  background: #fff;
+  margin: 4px 0;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: -100%;
+    height: 100vh;
+    width: 250px;
+    background: rgba(20, 20, 20, 0.95);
+    backdrop-filter: blur(10px);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    transition: right 0.4s ease;
+  }
+  .nav-links.active {
+    right: 0;
+  }
+  .menu-toggle {
+    display: flex;
+  }
+}
+
+/* Optional: Animated Hamburger Toggle */
+.menu-toggle.active .bar:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle.active .bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.menu-toggle.active .bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+</style>
+
+<script>
+  const menu = document.querySelector('#mobile-menu');
+  const navLinks = document.querySelector('.nav-links');
+
+  menu.addEventListener('click', () => {
+    menu.classList.toggle('active');
+    navLinks.classList.toggle('active');
+  });
+</script>
+
+
+
+</style>
+
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="logo">Khalil<span>Ahmed</span></div>
+  <ul class="nav-links">
+    <li><a href="#" class="active">Home</a></li>
+    <li><a href="#">Services</a></li>
+    <li><a href="#">Portfolio</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+  <div class="menu-toggle" id="mobile-menu">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </div>
+</nav>
+
+   
+
+
+<div>
+<img src="1.png">
+<img src="2.png">
+<img src="3.png">
+<img src="4.png">
+<img src="5.png">
+<img src="6.png">
+<img src="7.png">
+<img src="8.png">
+<img src="9.png">
+<img src="10.png">
+</div>
+
+
+</body>
+</html>
